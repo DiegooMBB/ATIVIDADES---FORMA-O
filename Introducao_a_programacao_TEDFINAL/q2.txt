@@ -1,0 +1,9 @@
+def calcula_fatorial(x):
+    total=1
+    for i in range (x):
+        total *= (i + 1)
+    return total
+
+numfat=int(input('Digite o numero para fatorar. '))
+resultado = calcula_fatorial(numfat)
+print(resultado)

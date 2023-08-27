@@ -1,0 +1,10 @@
+def converte_tempo(tempo):
+    horas = tempo // 3600
+    minutos = (tempo % 3600) // 60
+    segundos = (tempo % 3600) % 60
+
+    return f"{horas:02d}:{minutos:02d}:{segundos:02d}"
+
+segundos_totais = int(input('Digite a quantidade de segundos: '))
+tempo_formatado = converte_tempo(segundos_totais)
+print(tempo_formatado)

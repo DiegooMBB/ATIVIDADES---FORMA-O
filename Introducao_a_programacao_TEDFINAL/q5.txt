@@ -1,0 +1,23 @@
+def encontra_palavras(lista_palavras, letra):
+    palavras_iniciais = []
+    for palavra in lista_palavras:
+        if palavra.startswith(letra):
+            palavras_iniciais.append(palavra)
+    return palavras_iniciais
+
+m = 's'
+u = 's'
+lista_palavras = []
+letra=[]
+while m == 's':
+    letra = str(input('Digite a palavra: '))
+    m = str(input('Quer adicionar mais uma palavra?[s/n] --> '))
+    lista_palavras.append(letra)
+    if m == 'n':
+        break
+
+tt = str(input('Digite a letra: '))
+lista_palavras.append(tt)
+
+palavras_iniciais = encontra_palavras(lista_palavras, letra)
+print(palavras_iniciais)

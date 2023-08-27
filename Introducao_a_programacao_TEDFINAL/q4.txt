@@ -1,0 +1,11 @@
+def verifica_primo(numero):
+    if numero < 2:
+        return False
+    for i in range(2, numero):
+        if numero % i == 0:
+            return False
+    return True
+
+numero = int(input('Digite o numero para teste: '))
+primo = verifica_primo(numero)
+print(primo)
