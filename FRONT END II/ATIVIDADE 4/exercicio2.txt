@@ -1,0 +1,42 @@
+// O código trata de obter os dados do usuário sobre a altura e o sexo para gerar a média de altura dos homens, a menor altura e a maior altura e quantas mulheres participaram.
+let maioralt = 0;
+let menoralt = 100;
+let quanth = 0;
+let quantm = 0;
+let testealtm = 0;
+
+for (let i = 0; i < 10; i++) {
+    let a = prompt('Você é homem ou mulher? [H/M]');
+    a = a.toUpperCase();
+    if (a === 'H') {
+        let t = parseFloat(prompt('Qual é a sua altura em metros? (1.80) '));
+        testealtm += t;
+        if (t > maioralt) {
+            maioralt = t;
+        }
+        if (t < menoralt) {
+            menoralt = t;
+        }
+        quanth++;
+    } else if (a === 'M') {
+        let t = parseFloat(prompt('Qual é a sua altura em metros? (1.80) '));
+        if (t > maioralt) {
+            maioralt = t;
+        }
+        if (t < menoralt) {
+            menoralt = t;
+        }
+        quantm++;
+    }
+}
+
+let mediaaltm = 0;
+
+if (quanth > 0) {
+    mediaaltm = testealtm / quanth;
+}
+
+console.log('A maior altura foi ' + maioralt + '.');
+console.log('A menor altura foi ' + menoralt + '.');
+console.log('A média de altura dos homens foi ' + mediaaltm.toFixed(2) + '.');
+console.log('A quantidade de mulheres foi ' + quantm + '.');
